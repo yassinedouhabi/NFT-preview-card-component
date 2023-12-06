@@ -1,0 +1,138 @@
+@import url(node_modules/normalize.css/normalize.css);
+:root {
+  /* Colors */
+
+  /* Primary */
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+
+  /* Neutral */
+  --Very-dark-blue-main: hsl(217, 54%, 11%);
+  --Very-dark-blue-card: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+body {
+  font-family: "Outfit", sans-serif;
+}
+img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  overflow: hidden;
+  background-color: var(--Very-dark-blue-main);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+  height: auto;
+  padding: 20px;
+  background-color: var(--Very-dark-blue-card);
+  border-radius: 20px;
+}
+.image {
+  position: relative;
+  cursor: pointer;
+}
+.image:hover .bg-hover {
+  display: block;
+}
+.bg-hover {
+  display: none;
+  position: absolute;
+  background-color: hsl(178deg 100% 50% / 40%);
+  width: 100%;
+  height: 98.8%;
+  border-radius: 10px;
+}
+.view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nft {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+.nft-one {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.nft-one h1 {
+  font-size: 20px;
+  color: white;
+  margin: 0;
+  cursor: pointer;
+}
+.nft-one h1:hover {
+  color: var(--Cyan);
+}
+.nft-one p {
+  font-size: 16px;
+  color: var(--Soft-blue);
+  margin: 0;
+}
+.nft-two {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.price {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  color: var(--Cyan);
+  font-weight: 600;
+}
+.time {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px;
+  color: var(--Soft-blue);
+}
+.nft-three {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 20px;
+  border-top: 2px solid var(--Very-dark-blue-line);
+  padding-top: 20px;
+}
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  border: 1px solid var(--White);
+  border-radius: 50%;
+}
+.creator {
+  color: var(--Soft-blue);
+}
+.creator span {
+  cursor: pointer;
+  color: white;
+}
+.creator span:hover {
+  color: var(--Cyan);
+}
